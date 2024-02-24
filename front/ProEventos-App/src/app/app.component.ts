@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { EventosComponent } from './eventos/EventosComponent';
-import { PalestrantesComponent } from './palestrantes/palestrantes.component';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { EventosComponent } from './eventos/eventos.component';
+import { PalestrantesComponent } from './palestrantes/palestrantes.component';
+import { NavComponent } from './nav/nav.component';
+
+import { CollapseModule } from 'ngx-bootstrap/collapse'
+
 
 @Component({
     selector: 'app-root',
@@ -13,7 +18,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     imports: [RouterOutlet,
               EventosComponent,
               PalestrantesComponent,
+              NavComponent,
               HttpClientModule,
+              CollapseModule,
+              FormsModule
             ]
 })
 export class AppComponent {
